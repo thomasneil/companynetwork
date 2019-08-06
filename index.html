@@ -80,9 +80,9 @@ d3.json("fdgraph.json",function(error, graph) {
 
   function ticked() {
     link
-        .attr("x1", function(d) { return d.source.x; })
+        .attr("x1", function(d) { console.log(d.source);return d.source.x; })
         .attr("y1", function(d) { return d.source.y; })
-        .attr("x2", function(d) { return d.target.x; })
+        .attr("x2", function(d) { console.log(d.target);return d.target.x; })
         .attr("y2", function(d) { return d.target.y; });
 
     node
